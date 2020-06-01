@@ -1,0 +1,145 @@
+[06/May/2020:12:23:40,257] DEBUG MldhtService: <INFO> Starting DHT on port 49001
+[06/May/2020:12:23:40,356] DEBUG MldhtService: Filtering addresses to bind DHT server to.. Checking /0.0.0.0.. Could use: false
+[06/May/2020:12:23:40,357] DEBUG MldhtService: Filtering addresses to bind DHT server to.. Checking /127.0.0.1.. Could use: false
+[06/May/2020:12:23:40,357] DEBUG MldhtService: Filtering addresses to bind DHT server to.. Checking /192.168.0.174.. Could use: true
+[06/May/2020:12:23:40,417] DEBUG MldhtService: <INFO> DNS lookupg for router.silotis.usfailed: router.silotis.us
+[06/May/2020:12:23:40,453] DEBUG MldhtService: <INFO> Starting RPC Server
+[06/May/2020:12:23:45,450] ERROR MldhtService: Unexpected error in peer lookup: null. See DHT log file for diagnostic information.
+java.lang.NullPointerException
+	at bt.dht.MldhtService.getPeers(MldhtService.java:178)
+	at bt.dht.DHTPeerSource.collectPeers(DHTPeerSource.java:49)
+	at bt.peer.ScheduledPeerSource.lambda$schedulePeerCollection$0(ScheduledPeerSource.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[06/May/2020:12:23:45,488] ERROR MldhtService: Unexpected DHT error
+bt.BtException: Unexpected error in peer lookup: null. Diagnostics:
+==========================
+DHT Diagnostics. Type IPV4_DHT
+# of active servers / all servers: 1/1
+-----------------------
+Stats
+Reachable node estimate: 2 (0.5)
+DB Keys: 0
+DB Items: 0
+TX sum: 3 RX sum: 2
+avg task time/avg 1st result time (ms): 10000/10000
+Uptime: PT5.194Ss
+RPC stats
+### local RPCs
+            Method                 REQ |                 RSP               Error             Timeout 
+
+              PING                   3 |                   2                   0                   0 
+         FIND_NODE                   0 |                   0                   0                   0 
+         GET_PEERS                   0 |                   0                   0                   0 
+     ANNOUNCE_PEER                   0 |                   0                   0                   0 
+               GET                   0 |                   0                   0                   0 
+               PUT                   0 |                   0                   0                   0 
+ SAMPLE_INFOHASHES                   0 |                   0                   0                   0 
+           UNKNOWN                   0 |                   0                   0                   0 
+
+### remote RPCs
+            Method                 REQ |                 RSP              Errors 
+
+              PING                   0 |                   0                   0 
+         FIND_NODE                   0 |                   0                   0 
+         GET_PEERS                   0 |                   0                   0 
+     ANNOUNCE_PEER                   0 |                   0                   0 
+               GET                   0 |                   0                   0 
+               PUT                   0 |                   0                   0 
+ SAMPLE_INFOHASHES                   0 |                   0                   0 
+           UNKNOWN                   0 |                   0                   0 
+-----------------------
+Routing table
+buckets: 1 / entries: 2
+all   num:2 rep:0 [Home]
+
+-----------------------
+RPC Servers
+9D0499BD 5BA357B7 A140940E 8963221E 0E15CFF4	bind: /192.168.0.174 consensus: null
+rx: 2 tx: 3 active: 1 baseRTT: 8025 loss: 0.490050  loss (verified): 0.500000 uptime: PT5.005S
+RTT stats (2samples)  mean:2562.5002 median:125.0 mode:125.0 10tile:125.0 90tile:8025.0
+     0 |     50 |    100 |    150 |    200 |    250 |    300 |    350 |    400 |    450 |    500 |    550 |    600 |    650 |    700 |    750 |    800 |    850 |    900 |    950 |   1000 |   1050 |   1100 |   1150 |   1200 |   1250 |   1300 |   1350 |   1400 |   1450 |   1500 |   1550 |   1600 |   1650 |   1700 |   1750 |   1800 |   1850 |   1900 |   1950 |   2000 |   2050 |   2100 |   2150 |   2200 |   2250 |   2300 |   2350 |   2400 |   2450 |   2500 |   2550 |   2600 |   2650 |   2700 |   2750 |   2800 |   2850 |   2900 |   2950 |   3000 |   3050 |   3100 |   3150 |   3200 |   3250 |   3300 |   3350 |   3400 |   3450 |   3500 |   3550 |   3600 |   3650 |   3700 |   3750 |   3800 |   3850 |   3900 |   3950 |   4000 |   4050 |   4100 |   4150 |   4200 |   4250 |   4300 |   4350 |   4400 |   4450 |   4500 |   4550 |   4600 |   4650 |   4700 |   4750 |   4800 |   4850 |   4900 |   4950 |   5000 |   5050 |   5100 |   5150 |   5200 |   5250 |   5300 |   5350 |   5400 |   5450 |   5500 |   5550 |   5600 |   5650 |   5700 |   5750 |   5800 |   5850 |   5900 |   5950 |   6000 |   6050 |   6100 |   6150 |   6200 |   6250 |   6300 |   6350 |   6400 |   6450 |   6500 |   6550 |   6600 |   6650 |   6700 |   6750 |   6800 |   6850 |   6900 |   6950 |   7000 |   7050 |   7100 |   7150 |   7200 |   7250 |   7300 |   7350 |   7400 |   7450 |   7500 |   7550 |   7600 |   7650 |   7700 |   7750 |   7800 |   7850 |   7900 |   7950 |   8000 |   8050 |   8100 |   8150 |   8200 |   8250 |   8300 |   8350 |   8400 |   8450 |   8500 |   8550 |   8600 |   8650 |   8700 |   8750 |   8800 |   8850 |   8900 |   8950 |   9000 |   9050 |   9100 |   9150 |   9200 |   9250 |   9300 |   9350 |   9400 |   9450 |   9500 |   9550 |   9600 |   9650 |   9700 |   9750 |   9800 |   9850 |   9900 |   9950 | 
+    0% |     0% |    50% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% |     0% | 
+-----------------------
+Blacklist
+{}
+-----------------------
+Lookup Cache
+anchors (0):
+buckets (1) / entries (0):
+
+all entries: 0
+-----------------------
+Tasks
+next id: 2
+#### active: 
+#### queued: 
+NodeLookup 2 target:9D0499BD 5BA357B7 A140940E 8963221E 0E15CFF4 todo:0 srv: 9D0499BD 5BA357B7 A140940E 8963221E 0E15CFF4 QUEUED name:Bootstrap: lookup for self
+
+
+
+
+	at bt.dht.MldhtService.getPeers(MldhtService.java:188)
+	at bt.dht.DHTPeerSource.collectPeers(DHTPeerSource.java:49)
+	at bt.peer.ScheduledPeerSource.lambda$schedulePeerCollection$0(ScheduledPeerSource.java:81)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.NullPointerException
+	at bt.dht.MldhtService.getPeers(MldhtService.java:178)
+	... 7 more
+[06/May/2020:12:24:05,734] DEBUG MldhtService: <INFO> Estimator: new estimate:8 raw:3.128306681594874 error:0.6568373149449707
+[06/May/2020:12:24:06,174] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x23EE40B5E447/#�@��G   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x23EE40B5E447/#�@��G  targetKey:9D6F7A49 6FCB1BC3 5128669C 407C6F19 F23C8E51
+[06/May/2020:12:24:06,175] DEBUG MldhtService: <ERROR> Error [202] from: /139.162.168.10:6881 Message: "Server Error"
+[06/May/2020:12:24:06,176] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x86CE2084BB6D/�� ��m   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x86CE2084BB6D/�� ��m  targetKey:9D04A1AD A444E7B8 A771600B D212E93F 722493D4
+[06/May/2020:12:24:06,176] DEBUG MldhtService: <ERROR> Error [202] from: /80.241.212.30:6881 Message: "Server Error"
+[06/May/2020:12:24:06,270] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x4E9D71B385E2/N�q���   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x4E9D71B385E2/N�q���  targetKey:9D2F8C16 95D49242 773430BE B0F764A6 0994492A
+[06/May/2020:12:24:06,270] DEBUG MldhtService: <ERROR> Error [202] from: /154.45.216.224:1185 Message: "Server Error"
+[06/May/2020:12:24:06,296] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x358C250B5933/5�%�Y3   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x358C250B5933/5�%�Y3  targetKey:9D6F7A49 6FCB1BC3 5128669C 407C6F19 F23C8E51
+[06/May/2020:12:24:06,296] DEBUG MldhtService: <ERROR> Error [202] from: /23.250.91.130:6881 Message: "Server Error"
+[06/May/2020:12:24:06,346] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x349170A755B5/4�p�U�   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x349170A755B5/4�p�U�  targetKey:9D04A1AD A444E7B8 A771600B D212E93F 722493D4
+[06/May/2020:12:24:06,346] DEBUG MldhtService: <ERROR> Error [202] from: /199.168.97.146:6881 Message: "Server Error"
+[06/May/2020:12:24:06,390] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x23889BC884BF/#�����   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x23889BC884BF/#�����  targetKey:9D17CC2C 1EC73DCF BC4FA482 F645348E E3EF89F2
+[06/May/2020:12:24:06,390] DEBUG MldhtService: <ERROR> Error [202] from: /199.168.97.146:6881 Message: "Server Error"
+[06/May/2020:12:24:06,443] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x59AB249A518C/Y�$�Q�   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x59AB249A518C/Y�$�Q�  targetKey:9D048C68 FEAA4C0A B49351F8 61904D2A B19ABAE0
+[06/May/2020:12:24:06,443] DEBUG MldhtService: <ERROR> Error [202] from: /37.120.179.216:6881 Message: "Server Error"
+[06/May/2020:12:24:06,470] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x0471F212986D/�q���m   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x0471F212986D/�q���m  targetKey:9D0437F5 6697CF15 E9F5FD7F D9AB4DD7 B6034DDD
+[06/May/2020:12:24:06,471] DEBUG MldhtService: <ERROR> Error [202] from: /198.27.64.17:6882 Message: "Server Error"
+[06/May/2020:12:24:10,206] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x8E4674F8A2EC/�Ft���   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x8E4674F8A2EC/�Ft���  targetKey:9AF9A083 0C22A01A 0699F7CF 3A499576 BE944271
+[06/May/2020:12:24:10,207] DEBUG MldhtService: <ERROR> Error [202] from: /142.4.214.134:6882 Message: "Server Error"
+[06/May/2020:12:24:16,782] DEBUG MldhtService: <INFO> Estimator: new estimate:95 raw:6.569907912489612 error:0.7197597269780509
+[06/May/2020:12:24:17,459] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0xE7D3DC1AE8EE/������   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0xE7D3DC1AE8EE/������  targetKey:9AF9A083 0C22A01A 0699F7CF 3A499576 BE944271
+[06/May/2020:12:24:17,459] DEBUG MldhtService: <ERROR> Error [202] from: /185.217.94.245:6881 Message: "Server Error"
+[06/May/2020:12:24:18,665] DEBUG MldhtService: <ERROR> not sure how to handle message  Method:UNKNOWN Type:RSP_MSG MessageID:0x4C412C77F51E/LA,w�� version:0x4C54000F/LT��  
+[06/May/2020:12:24:26,190] DEBUG MldhtService: <INFO> Estimator: new estimate:623 raw:9.284809548546287 error:0.7372537669354092
+[06/May/2020:12:24:26,318] DEBUG MldhtService: <INFO> Estimator: new estimate:4086 raw:11.996679251935355 error:0.7440451863856852
+[06/May/2020:12:24:27,041] DEBUG MldhtService: <INFO> Estimator: new estimate:15927 raw:13.959260554028575 error:0.7394008152694073
+[06/May/2020:12:24:27,191] DEBUG MldhtService: <INFO> Estimator: new estimate:50444 raw:15.622423149100435 error:0.730760495858957
+[06/May/2020:12:24:27,201] DEBUG MldhtService: <INFO> Estimator: new estimate:122818 raw:16.90617022003049 error:0.7187086556670401
+[06/May/2020:12:24:27,232] DEBUG MldhtService: <INFO> Estimator: new estimate:235935 raw:17.848033645425573 error:0.7042205262943018
+[06/May/2020:12:24:27,256] DEBUG MldhtService: <INFO> Estimator: new estimate:511976 raw:18.965717815019527 error:0.6912924384187197
+[06/May/2020:12:24:27,269] DEBUG MldhtService: <INFO> Estimator: new estimate:737711 raw:19.492697408439142 error:0.6744434840963184
+[06/May/2020:12:24:27,296] DEBUG MldhtService: <INFO> Estimator: new estimate:1148875 raw:20.13179114360724 error:0.6589858081082979
+[06/May/2020:12:24:27,504] DEBUG MldhtService: <INFO> Estimator: new estimate:1337039 raw:20.350611094449757 error:0.6409024040007537
+[06/May/2020:12:24:28,721] DEBUG MldhtService: <INFO> Estimator: new estimate:1668887 raw:20.670455309502053 error:0.6242249555980519
+[06/May/2020:12:24:29,181] DEBUG MldhtService: <INFO> Estimator: new estimate:1953060 raw:20.897305400027346 error:0.6073721419697912
+[06/May/2020:12:24:29,521] DEBUG MldhtService: <INFO> Estimator: new estimate:2729596 raw:21.380256263443272 error:0.593242040684342
+[06/May/2020:12:33:41,190] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x52DE35EE65A1/R�5�e�   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x52DE35EE65A1/R�5�e�  targetKey:3A62D601 CCAB2973 D4C15C39 55A9F7FF CE9C523E
+[06/May/2020:12:33:41,190] DEBUG MldhtService: <ERROR> Error [202] from: /154.45.216.219:1253 Message: "Server Error"
+[06/May/2020:12:33:41,324] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x72C9801DBD09/r�����   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x72C9801DBD09/r�����  targetKey:3A62D601 CCAB2973 D4C15C39 55A9F7FF CE9C523E
+[06/May/2020:12:33:41,325] DEBUG MldhtService: <ERROR> Error [202] from: /54.37.218.16:6881 Message: "Server Error"
+[06/May/2020:12:33:53,745] DEBUG MldhtService: <INFO> Estimator: new estimate:2938492 raw:21.48664463978007 error:0.5763790700749832
+[06/May/2020:12:39:06,316] DEBUG MldhtService: <INFO> force-removing routing table entry D6F14E55 0367AFC6 FD1A2779 A5EA39E9 A6CD9027//78.106.143.45:6881;sent:PT0.025S;seen:PT15M0.49S;age:PT15M0.49S;verified;rtt:23.999999999999996;ver:0x4C540126/LT�& because ID-change was detected; new ID:7D571570 FAB01226 945E41E9 3A8A1AAB E33B9DBD
+[06/May/2020:12:54:11,183] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x8CFE1817286B/����(k   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x8CFE1817286B/����(k  targetKey:9D0499BD 5BA357B7 A140940E 8963221E 0E15CFF4
+[06/May/2020:12:54:11,183] DEBUG MldhtService: <ERROR> Error [202] from: /23.250.91.130:6881 Message: "Server Error"
+[06/May/2020:12:54:23,675] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x0E18360B6C04/��6�l�   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x0E18360B6C04/��6�l�  targetKey:9D048FFB 589D2CF8 CCEE161B BB467054 81AED7BC
+[06/May/2020:12:54:23,675] DEBUG MldhtService: <ERROR> Error [202] from: /23.250.91.130:6881 Message: "Server Error"
+[06/May/2020:12:54:24,939] DEBUG MldhtService: <ERROR> received non-response [ Method:FIND_NODE Type:ERR_MSG MessageID:0x23A616475939/#��GY9   code:202 errormsg: 'Server Error' id:null] in response to request:  Method:FIND_NODE Type:REQ_MSG MessageID:0x23A616475939/#��GY9  targetKey:9D05A6C1 C779B04A E07E974B AC39399F 8D3A37AA
+[06/May/2020:12:54:24,939] DEBUG MldhtService: <ERROR> Error [202] from: /208.110.64.170:6881 Message: "Server Error"
+[06/May/2020:12:54:35,969] DEBUG MldhtService: <INFO> Estimator: new estimate:3217869 raw:21.61767459620871 error:0.5602899643750516
+[06/May/2020:12:54:36,938] DEBUG MldhtService: <INFO> Estimator: new estimate:3054228 raw:21.54237661439231 error:0.5427352540757694
